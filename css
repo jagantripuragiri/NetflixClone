@@ -1,0 +1,242 @@
+:root {
+    --primary: #141414;
+    --light: #F3F3F3;
+    --dark: #686868;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary);
+    color: var(--light);
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    line-height: 1.4;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    padding-top: 60px;
+}
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px 20px 0 20px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+    width: 100%;
+}
+
+.netflixLogo {
+    object-fit: cover;
+    width: 100px;
+    max-height: 100%;
+    padding-left: 30px;
+}
+
+.netflixLogo img {
+    height: 35px;
+}
+
+#logo {
+    color: #E50914;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav {
+    flex-grow: 4;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.main-nav a {
+    color: var(--light);
+    text-decoration: none;
+    margin: 5px;
+}
+
+.main-nav a:hover {
+    color: var(--dark);
+}
+
+.sub-nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 40px;
+}
+
+.sub-nav a {
+    color: var(--light);
+    text-decoration: none;
+    margin: 5px;
+}
+
+.sub-nav a:hover {
+    color: var(--dark);
+}
+
+.main-container {
+    padding: 50px;
+    margin-top: 80px;
+    /* Ensure content isn't hidden behind the fixed header */
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box a {
+    flex: 1 1 100px;
+    transition: transform .3s;
+}
+
+.box a:hover {
+    transform: scale(1.4);
+}
+
+.box img {
+    border-radius: 2px;
+}
+
+.link {
+    padding: 50px;
+}
+
+.sub-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.sub-links a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.sub-links a:hover {
+    color: var(--dark);
+    text-decoration: underline;
+}
+
+.logos a {
+    padding: 10px;
+}
+
+.logo {
+    color: var(--dark);
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: var(--dark);
+    margin: 10px;
+}
+
+.link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media(max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .box {
+        gap: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .box a {
+        flex: 1 1 calc(25% - 20px);
+    }
+}
+
+@media(max-width: 700px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .box a {
+        flex: 1 1 calc(33.33% - 20px);
+    }
+
+    .sub-links ul {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 500px) {
+    .wrapper {
+        font-size: 15px;
+    }
+
+    header {
+        position: static;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .netflixLogo {
+        margin: auto;
+        padding-right: 20px;
+    }
+
+    .main-nav {
+        flex-direction: column;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .box a:hover {
+        transform: scale(1.2);
+    }
+
+    .logos {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sub-links ul {
+        flex-direction: column;
+        text-align: center;
+        font-size: 15px;
+    }
+}
